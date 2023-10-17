@@ -1,4 +1,4 @@
-const sampleData = [
+ const sampleData = [
 
     { id: 1, name: 'John Doe', age: 25, city: 'New York', occupation: 'Engineer' },
   
@@ -21,3 +21,5 @@ const sampleData = [
     { id: 10, name: 'Ivy Adams', age: 33, city: 'Atlanta', occupation: 'Entrepreneur' },
   
   ];
+
+  export default sampleData

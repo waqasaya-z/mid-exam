@@ -1,11 +1,10 @@
 import React from "react";
 import data from "./data";
 
-const Table = () => {
-  console.log(data);
+const Table = ({filteredData}) => {
   return (
     <>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col"> Id </th>
@@ -15,7 +14,7 @@ const Table = () => {
             <th scope="col"> Occupation </th>
           </tr>
         </thead>
-        {data.map((items) => (
+        {filteredData.map((items) => (
           <tbody key={items.id}>
             <tr>
               <th scope="row">{items.id}</th>

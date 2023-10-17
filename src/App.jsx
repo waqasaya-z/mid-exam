@@ -3,6 +3,7 @@ import Dropdown from "./Dropdown";
 import Table from "./Table";
 import data from "./data";
 import { useState } from "react";
+import OccupationDropDown from "./OccupationDropDown";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -38,8 +39,12 @@ function App() {
 
   return (
     <>
-      <input onChange={handleChange} />
+    <div className="d-flex flex-row p-8 mt-10">
+
+      <input onChange={handleChange} placeholder="Enter Age or name to filter" className="w-50" />
       <Dropdown data={data} handleCity={handleCity} />
+      <OccupationDropDown data={data} />
+    </div>
       <h1> Table </h1>
       <Table filteredData={filteredData} />
     </>

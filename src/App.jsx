@@ -25,12 +25,15 @@ function App() {
 
   const handleCity = (e) => {
     const CityData = e.target.value;
+    console.log(e.target.value)
+    console.log(CityData)
     const arr = data.filter((items) =>
       items.city
         .toString()
         .toLowerCase()
         .includes(CityData.toString().toLowerCase())
     );
+   
     return arr;
   };
 

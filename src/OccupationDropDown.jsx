@@ -2,13 +2,13 @@
 const OccupationDropDown = ({data, handleCity}) => {
     return (
       <>
-      <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div className="dropdown">
+    <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
      Occupation
     </button>
-    <ul class="dropdown-menu">
+    <ul className="dropdown-menu">
       {data.map(items => 
-          <li onClick={handleCity} value={items.city}>{items.occupation}</li>
+          <li key={items.id}  onClick={handleCity} value={items.occupation}>{items.occupation}</li>
     )
       }
     </ul>
